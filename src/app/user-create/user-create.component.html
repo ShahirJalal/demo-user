@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Create User</h2>
+    <form [formGroup]="createUserForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" formControlName="username" id="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" formControlName="password" id="password">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" formControlName="email" id="email">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!createUserForm.valid">Create</button>
+    </form>
+</div>
